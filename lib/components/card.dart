@@ -69,7 +69,7 @@ class CardWidget extends StatelessWidget {
             children: [
               Container(
                 margin: const EdgeInsets.all(20),
-                width: 200,
+                width: 180,
                 decoration: BoxDecoration(
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(15),
@@ -91,41 +91,42 @@ class CardWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(top: 20, right: 20, bottom: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      country,
-                      style: GoogleFonts.nunito(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
+              SizedBox(
+                width: 128,
+                child: Container(
+                  margin: const EdgeInsets.only(top: 20, bottom: 20, right: 20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        country,
+                        style: GoogleFonts.nunito(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold
+                        ),
                       ),
-                    ),
-                    Text(
-                      continent,
-                      style: GoogleFonts.nunito(
-                        color: Colors.white.withOpacity(0.9),
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold
+                      Text(
+                        continent,
+                        style: GoogleFonts.nunito(
+                          color: Colors.white.withOpacity(0.9),
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 126,
-                      child: Text(
+                      Text(
                         language,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: GoogleFonts.nunito(
                           color: Colors.white.withOpacity(0.9),
-                          fontSize: 15,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
